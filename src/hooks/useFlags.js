@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchFlags } from '../services/flags';
 
-export function useBlogs() {
+export function useFlags() {
   const [flags, setFlags] = useState([]);
 
   useEffect(() => {
