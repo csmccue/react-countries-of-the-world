@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function FlagCard({ id, name, iso2, iso3, local_name }) {
+export default function FlagCard({ name, iso2 }) {
   return (
     <div className="flag-card">
       <div className="details">

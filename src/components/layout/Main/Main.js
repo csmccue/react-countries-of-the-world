@@ -4,7 +4,6 @@ import { useFlags } from '../../../hooks/useFlags';
 
 export default function Main() {
   const { flags } = useFlags();
-  console.log(flags);
   return (
     <main>
       Hello there!
