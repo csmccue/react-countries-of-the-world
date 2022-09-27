@@ -9,6 +9,5 @@ function App() {
     </section>
   );
 }
-// huh
 
 export default App;
