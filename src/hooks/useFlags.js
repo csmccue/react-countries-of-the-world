@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { fetchFlags } from '../services/flags';
 
 export function useFlags() {
+  const [continent, setContinent] = useState([]);
   const [flags, setFlags] = useState([]);
 
   useEffect(() => {
@@ -16,5 +17,15 @@ export function useFlags() {
     fetchData();
   }, []);
 
-  return { flags };
+  const filterCountries = () => {
+    if (continent === 'all') {
+      return flags;
+    } 
+    const countries2 = flags.filter((flag) => flag.continent === continent);
+    console.log(countries2);
+    return countries2;
+  };
+
+
+  return { flags, filterCountries, setContinent };
 }

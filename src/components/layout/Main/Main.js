@@ -4,13 +4,13 @@ import { useFlags } from '../../../hooks/useFlags';
 import Filter from '../../Filter/Filter';
 
 export default function Main() {
-  const { flags, continent, setContinent } = useFlags();
+  const { continent, setContinent, filterCountries } = useFlags();
   return (
     <main>
       Hello there!
       <Filter continent={continent} setContinent={setContinent}/>
       <div>
-        {flags.map((flag) => (
+        {filterCountries().map((flag) => (
           <FlagCard key={flag.id} {...flag} />
         ))}
       </div>

@@ -9,7 +9,7 @@ export default function Filter({ continent, setContinent }) {
           setContinent(e.target.value);
         }}>
         <option value ="all">All</option>
-        <option value ="europe">Europe</option>
+        <option value ="Europe">Europe</option>
       </select>
     </>
   );
