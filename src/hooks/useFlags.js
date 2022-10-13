@@ -6,8 +6,12 @@ export function useFlags() {
 
   useEffect(() => {
     async function fetchData() {
-      const data = await fetchFlags();
-      setFlags(data);
+      try {
+        const data = await fetchFlags();
+        setFlags(data);
+      } catch (e) {
+        alert('Something went wrong');
+      }
     }
     fetchData();
   }, []);
