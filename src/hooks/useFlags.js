@@ -22,7 +22,6 @@ export function useFlags() {
       return flags;
     } 
     const countries2 = flags.filter((flag) => flag.continent === continent);
-    console.log(countries2);
     return countries2;
   };
 
